@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <style>
+        /* Add your custom CSS here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            padding: 1em 0;
+        }
+        header .logo {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .service {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .title h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .title span {
+            color: #f39c12;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .card img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .card h5 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .pra {
+            margin-top: 10px;
+            color: #000; /* Changed to black for better visibility */
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .skill-section {
+            padding: 50px 0;
+        }
+        .skill-section .title {
+            margin-bottom: 30px;
+        }
+        .skill-bars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .skill-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        .skill-bar {
+            margin-top: 10px;
+        }
+        .skill-bar p {
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .skill-bar .skill-box {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .skill-bar .skill-level {
+            height: 100%;
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        /* Specific Skill Levels */
+        .skill-bar .html .skill-level {
+            width: 90%;
+            background-color: #e44d26;
+        }
+        .skill-bar .css .skill-level {
+            width: 85%;
+            background-color: #3498db;
+        }
+        .skill-bar .php .skill-level {
+            width: 75%;
+            background-color: #e74c3c;
+        }
+        .skill-bar .react .skill-level {
+            width: 60%;
+            background-color: #61dafb;
+        }
+        .skill-bar .bootstrap .skill-level {
+            width: 55%;
+            background-color: #7952b3;
+        }
+        .skill-bar .laravel .skill-level {
+            width: 50%;
+            background-color: #ff2d20;
+        }
+        .skill-bar .mysql .skill-level {
+            width: 80%;
+            background-color: #00758f;
+        }
+        .skill-bar .postman .skill-level {
+            width: 65%;
+            background-color: #ff6c37;
+        }
+        .skill-bar .postgresql .skill-level {
+            width: 70%;
+            background-color: #336791;
+        }
+
+        /* Image in Skill Cards */
+        .skill-image {
+            margin-top: 10px;
+        }
+        .skill-image img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">PORTFOLIO</h1>
+            <ul>
+                <li><a href="index.html#about-section">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="service" id="skills-section">
+        <div class="title" data-aos="fade-right">
+            <h2>Pro<span>ject</span></h2>
+        </div>
+        <div class="box">
+            <!-- Front End Card -->
+            <div class="card" data-aos="zoom-in-down">
+                <h5>Project : Website Sekolah</h5>
+                <a href="webWikrama.png" target="_blank"><img src="webWikrama.png" alt="Project 1"></a>
+                <div class="pra">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- UI/UX Card -->
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="200">
+                <h5>Project : Inventaris Consume</h5>
+                <a href="inventaris.png" target="_blank"><img src="inventaris.png" alt="Project 2"></a>
+                <div class="pra">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Additional Projects -->
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="200">
+                <h5>Project : Database</h5>
+                <a href="database.png" target="_blank"><img src="database.png" alt="Project 3"></a>
+                <div class="pra">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Project 4: Certificate -->
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="200">
+                <h5>Certificate</h5>
+                <a href="certificate.png" target="_blank"><img src="certificate.png" alt="Project 4"></a>
+                <div class="pra">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Project 5: Sertificate -->
+            <div class="card" data-aos="zoom-in-down" data-aos-delay="200">
+                <h5>Certificate</h5>
+                <a href="sertificate1.png" target="_blank"><img src="sertificate1.png" alt="Project 5"></a>
+                <div class="pra">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill-section">
+        <div class="title" data-aos="fade-right">
+            <h2>Ski<span>ll</span></h2>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="skill-bars">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-bar">
+                    <p>HTML</p>
+                    <div class="skill-box html">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="html.png" alt="HTML Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-bar">
+                    <p>CSS</p>
+                    <div class="skill-box css">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="css.png" alt="CSS Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-bar">
+                    <p>PHP</p>
+                    <div class="skill-box php">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="php.jpg" alt="PHP Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-bar">
+                    <p>React</p>
+                    <div class="skill-box react">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="react.png" alt="React Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="skill-bar">
+                    <p>Bootstrap</p>
+                    <div class="skill-box bootstrap">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="boostrap.jpg" alt="Bootstrap Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="skill-bar">
+                    <p>Laravel</p>
+                    <div class="skill-box laravel">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="Laravel.png" alt="Laravel Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="skill-bar">
+                    <p>MySQL</p>
+                    <div class="skill-box mysql">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="mysql.png" alt="MySQL Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="900">
+                <div class="skill-bar">
+                    <p>Postman</p>
+                    <div class="skill-box postman">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="postman.png" alt="Postman Icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="1000">
+                <div class="skill-bar">
+                    <p>PostgreSQL</p>
+                    <div class="skill-box postgresql">
+                        <div class="skill-level"></div>
+                    </div>
+                    <div class="skill-image">
+                        <img src="postgresql.png" alt="PostgreSQL Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Footer content goes here.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
